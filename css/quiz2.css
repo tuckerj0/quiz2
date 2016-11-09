@@ -3,19 +3,30 @@
  - give a border to the section elements and a border radius of 10px
  - set up the document to use ems or rems based off of a 62.5% root font size
  - a transition that moves the <p> tags over a few pixels when you hover over them (and back when you aren't hovering)*/
-
-html, bdy {
+html{
+	font-size: 0.625em;
+}
+html, body {
 	font-family: Helvetica, Arial, sans-serif;
 	background: #eeee;
 }
 
 p {
 	margin: 10px 0;
-	font-weight: bold
+	font-weight: bold;
+}
+p:hover{
+	position: relative;
+	left:5px;
 }
 
 section {
 	margin-bottom: 10px;
+	border: solid black 1px;
+	border-radius: 10px;
+}
+section:hover {
+	background-color: blue;
 }
 
 ul {
@@ -25,3 +36,23 @@ ul {
 ul {
 	list-style: none;
 }
+footer {
+	display: none;
+	font-size: 30px;
+}
+button.ac {
+    background-color: grey;
+    color: black;
+	width: 100%;
+    transition: 0.4s;
+}
+div.section {
+    display: none;
+}
+div.section.show {
+    display: block;
+}
+#left{
+	display: none;
+}
+
